@@ -1,3 +1,26 @@
+
+
+<head>
+<style>
+
+body{
+  background: url('/assets/blog4.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  color:blue;
+  font-style: italic;
+  font-size: 20px;
+ 
+}
+
+
+</style>
+
+
+</head>
+
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
@@ -7,9 +30,12 @@
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
+ 
 <h2>Comments</h2>
 <%= render @article.comments %>
+ 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
+ 
 <%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to "Back", {:action => "index", :controller => "articles" } %>
+<%= link_to 'Back', articles_path %>
